@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Generics<T>{
-        public<T> List<List<T>> boxingMethod(T name) {
-        List<T> firstList = new ArrayList<T>();
+        public List<List<T>> boxingMethod(T name) {
+        List<T> firstList = new ArrayList<>();
         firstList.add(name);
-        List<List<T>> secondList = new ArrayList<List<T>>();
+        List<List<T>> secondList = new ArrayList<>();
         secondList.add(firstList);
         return secondList;
     }
@@ -18,7 +18,7 @@ public class Generics<T>{
     }
 
     //TODO: Refactor Method-3
-    public<T> void cloneMethod(List<T> consumer, List<T> producer) {
+    public void cloneMethod(List<T> consumer, List<T> producer) {
         consumer.addAll(producer);
     }
 
